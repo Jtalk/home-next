@@ -1,0 +1,18 @@
+{
+  "name": "home3",
+  "description": "My new personal page. I'm definitely gonna get this right THIS TIME!",
+  "packageManager": "yarn@3.2.2",
+  "license": "AGPLv3",
+  "scripts": {
+    "dev": "yarn workspaces foreach run dev",
+    "lint:eslint": "yarn workspaces foreach run eslint .",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:prettier && yarn lint:eslint"
+  },
+  "workspaces": [
+    "*"
+  ],
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
