@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-storyblok": "yarn update-storyblok:pull-components && yarn update-storyblok:codegen",
+    "update-storyblok:pull-components": "yarn node storyblok-update.js --space 172250 -o storyblok/components.json",
+    "update-storyblok:codegen": "yarn storyblok-generate-ts source=./storyblok/components.json target=./src/model titleSuffix=_model"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.1",
@@ -14,6 +17,8 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.1",
+    "@storyblok/react": "^1.1.5",
+    "axios": "^0.27.2",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -22,8 +27,12 @@
     "@types/node": "18.7.8",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
+    "@types/yargs": "^17.0.11",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
-    "typescript": "4.7.4"
+    "storyblok": "^3.10.5",
+    "storyblok-generate-ts": "^1.6.0",
+    "typescript": "4.7.4",
+    "yargs": "^17.5.1"
   }
 }
