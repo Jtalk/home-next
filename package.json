@@ -1,7 +1,7 @@
 {
   "name": "home3",
   "description": "My new personal page. I'm definitely gonna get this right THIS TIME!",
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "yarn@3.6.3",
   "license": "AGPLv3",
   "scripts": {
     "dev": "yarn workspaces foreach run dev",
@@ -13,6 +13,12 @@
     "*"
   ],
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "eslint": "^8.48.0",
+    "eslint-config-next": "^13.4.19",
+    "next": "^13.4.19",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2"
   }
 }
