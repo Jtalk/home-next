@@ -2,6 +2,9 @@
 
 import { styled } from "@mui/material";
 import { IntroHeroModel } from "../model";
+import Image from "next/image";
+import { WithPreloadBlur } from "../data/image";
+import ZIndex from "../theme/zindex";
 
 // CSS - Content interop
 const cssStyleBright = "hero-text-bright" as const;
@@ -16,12 +19,22 @@ const contentToCssStyle: Record<IntroHeroModel["textColourScheme"], CssStyles> =
 
 // CSS Components
 const HeroContainer = styled("section")`
-  background-color: #fafafa;
   box-sizing: border-box;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+`;
+const BackgroundImage = styled(Image)`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%; // TODO make focal point configurable
+  z-index: ${ZIndex.background};
 `;
 const TextContainer = styled("label")`
   display: flex;
@@ -36,6 +49,8 @@ const TextContainer = styled("label")`
   }
 `;
 const Title = styled("h1")`
+  font-size: 2em;
+  font-weight: bold;
   margin: 0px;
 
   &::before,
@@ -63,14 +78,24 @@ const Subtitle = styled("h3")`
 `;
 
 export type HeroProps = {
-  content: IntroHeroModel;
+  content: WithPreloadBlur<IntroHeroModel, "background">;
 };
 
 export default function Hero(props: HeroProps) {
   const textColourClass = contentToCssStyle[props.content.textColourScheme];
-
   return (
     <HeroContainer>
+      {props.content.background && (
+        <BackgroundImage
+          src={props.content.background.filename}
+          width={2000}
+          height={1000}
+          priority={true}
+          placeholder="blur"
+          blurDataURL={props.content.background.blurDataURL}
+          alt=""
+        />
+      )}
       <TextContainer className={textColourClass}>
         <Subtitle>{props.content.intro}</Subtitle>
         <Title>{props.content.title}</Title>

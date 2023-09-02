@@ -1,15 +1,19 @@
-import Container from "@mui/material/Container";
 import type { PageModel } from "./model";
 import { fetchContent } from "./data/storyblok";
 import { Metadata } from "next";
 import Hero from "./components/Hero";
+import { withPreloadedBlur } from "./data/image";
 
 export default async function Home() {
   const content = await fetchPageContent();
+  const heroContent = await withPreloadedBlur(content.hero[0], "background", {
+    width: 600,
+    height: 300,
+  });
 
   return (
     <main>
-      <Hero content={content.hero[0]} />
+      <Hero content={heroContent} />
     </main>
   );
 }
