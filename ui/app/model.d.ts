@@ -11,9 +11,11 @@ export interface AssetModel {
 }
 
 export interface IntroHeroModel {
+  intro?: string;
   title: string;
   subtitle?: string;
   background?: AssetModel;
+  textColourScheme: "bright" | "dark";
   _uid: string;
   component: "intro-hero";
 }

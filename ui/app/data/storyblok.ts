@@ -5,11 +5,18 @@ const storyblok = new StoryblokClient({
   accessToken: Dev.storyblok.previewToken,
 });
 
-export async function fetchStory(path: string) {
+export async function fetchContent<T>(path: string): Promise<T> {
   try {
-    await storyblok.getStory(path, {});
+    const story = await storyblok.getStory(path, {
+      version: Dev.storyblok.version,
+    });
+    return story.data.story.content as T;
   } catch (e) {
-    // Ignoring it for now, Storyblok hasn't been set up yet
+    console.error("Error fetching content at ", path, e);
+    if (e instanceof Error) {
+      throw Error(e.message);
+    } else {
+      throw Error("Unknown error");
+    }
   }
-  return {};
 }
