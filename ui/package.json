@@ -10,7 +10,7 @@
     "lint": "next lint",
     "update-storyblok": "yarn update-storyblok:pull-components && yarn update-storyblok:codegen",
     "update-storyblok:pull-components": "yarn node storyblok-update.js --space 172250 -o storyblok/components.json",
-    "update-storyblok:codegen": "yarn storyblok-generate-ts source=./storyblok/components.json target=./src/model titleSuffix=_model"
+    "update-storyblok:codegen": "yarn storyblok-generate-ts source=./storyblok/components.json target=./app/model titleSuffix=_model"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -32,6 +32,7 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@types/yargs": "^17.0.24",
+    "dotenv": "^16.3.1",
     "eslint": "^8.48.0",
     "eslint-config-next": "^13.4.19",
     "storyblok-generate-ts": "^1.15.1",

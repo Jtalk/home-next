@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-const axios = require("axios");
-const yargs = require("yargs/yargs");
-const { hideBin } = require("yargs/helpers");
-const fs = require("fs/promises");
+import axios from "axios";
+import yargs from "yargs/yargs";
+import { hideBin } from "yargs/helpers";
+import fs from "fs/promises";
+import "dotenv/config";
 
 const ExitCodeNoToken = 1;
 const ExitCodeFetchError = 2;
@@ -35,10 +36,12 @@ async function main() {
   );
 }
 
-main().catch((err) => {
+try {
+  await main();
+} catch (err) {
   console.error("Unexpected error:", err.message, err.toJson?.());
   process.exit(ExitCodeFetchError);
-});
+}
 
 /**
  * @return Promise<axios.AxiosResponse>

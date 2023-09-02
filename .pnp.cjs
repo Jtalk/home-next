@@ -807,6 +807,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.2.7"],\
             ["@types/yargs", "npm:17.0.24"],\
             ["axios", "npm:1.5.0"],\
+            ["dotenv", "npm:16.3.1"],\
             ["eslint", "npm:8.48.0"],\
             ["eslint-config-next", "virtual:d280a2c1b3c72be949db36e6e764875a44bbd7755f00c32f3c1af2a6404223cdf88e70704233ae86b79516d93821a1c5876f041dbdcd85335e50aac513bbbb66#npm:13.4.19"],\
             ["next", "virtual:8538185f02d068cf416140993ca3dea376a123f7cf785fe8a8bce7494f12a778857a1153d1c4dc3ca76cba3e838b37f8ace9286bc294a828f280b9a80a950b11#npm:13.4.19"],\
@@ -2582,6 +2583,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dom-helpers", "npm:5.2.1"],\
             ["@babel/runtime", "npm:7.18.9"],\
             ["csstype", "npm:3.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dotenv", [\
+        ["npm:16.3.1", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.3.1-e6d380a398-15d75e7279.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\

@@ -598,6 +598,7 @@ __metadata:
     "@types/react-dom": 18.2.7
     "@types/yargs": ^17.0.24
     axios: ^1.5.0
+    dotenv: ^16.3.1
     eslint: ^8.48.0
     eslint-config-next: ^13.4.19
     next: ^13.4.19
@@ -2020,6 +2021,13 @@ __metadata:
     "@babel/runtime": ^7.8.7
     csstype: ^3.0.2
   checksum: 863ba9e086f7093df3376b43e74ce4422571d404fc9828bf2c56140963d5edf0e56160f9b2f3bb61b282c07f8fc8134f023c98fd684bddcb12daf7b0f14d951c
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.3.1":
+  version: 16.3.1
+  resolution: "dotenv@npm:16.3.1"
+  checksum: 15d75e7279018f4bafd0ee9706593dd14455ddb71b3bcba9c52574460b7ccaf67d5cf8b2c08a5af1a9da6db36c956a04a1192b101ee102a3e0cf8817bbcf3dfd
   languageName: node
   linkType: hard
 

@@ -1,3 +1,5 @@
+import {StoryblokStory} from 'storyblok-generate-ts'
+
 export interface AssetModel {
   alt?: string;
   copyright?: string;
@@ -5,6 +7,7 @@ export interface AssetModel {
   filename: string;
   name: string;
   title?: string;
+  focus?: string;
   [k: string]: any;
 }
 
