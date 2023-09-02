@@ -10,7 +10,7 @@
     "lint": "next lint",
     "update-storyblok": "yarn update-storyblok:pull-components && yarn update-storyblok:codegen",
     "update-storyblok:pull-components": "yarn node storyblok-update.js --space 172250 -o storyblok/components.json",
-    "update-storyblok:codegen": "yarn storyblok-generate-ts source=./storyblok/components.json target=./app/model titleSuffix=_model"
+    "update-storyblok:codegen": "yarn storyblok-generate-ts source=./storyblok/components.json target=./app/model titleSuffix=_model compilerOptions.additionalProperties=false"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",

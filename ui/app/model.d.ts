@@ -8,7 +8,6 @@ export interface AssetModel {
   name: string;
   title?: string;
   focus?: string;
-  [k: string]: any;
 }
 
 export interface IntroHeroModel {
@@ -17,7 +16,6 @@ export interface IntroHeroModel {
   background?: AssetModel;
   _uid: string;
   component: "intro-hero";
-  [k: string]: any;
 }
 
 export interface PageModel {
@@ -26,5 +24,4 @@ export interface PageModel {
   _uid: string;
   component: "page";
   uuid?: string;
-  [k: string]: any;
 }
