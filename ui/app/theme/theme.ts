@@ -1,9 +1,21 @@
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-
 import { createTheme } from "@mui/material";
 
-const Theme = createTheme({});
+const Theme = createTheme({
+  typography: {
+    // https://mui.com/material-ui/customization/typography/
+    // I don't want to worry about custom fonts & FontLoader.
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+  },
+});
 export default Theme;

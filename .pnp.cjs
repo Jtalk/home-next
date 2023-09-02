@@ -667,15 +667,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@fontsource/roboto", [\
-        ["npm:5.0.8", {\
-          "packageLocation": "./.yarn/cache/@fontsource-roboto-npm-5.0.8-35f6bafae2-8aa9c1557e.zip/node_modules/@fontsource/roboto/",\
-          "packageDependencies": [\
-            ["@fontsource/roboto", "npm:5.0.8"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@humanwhocodes/config-array", [\
         ["npm:0.11.10", {\
           "packageLocation": "./.yarn/cache/@humanwhocodes-config-array-npm-0.11.10-7b63df9e7f-1b1302e240.zip/node_modules/@humanwhocodes/config-array/",\
@@ -797,7 +788,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/cache", "npm:11.11.0"],\
             ["@emotion/react", "virtual:8538185f02d068cf416140993ca3dea376a123f7cf785fe8a8bce7494f12a778857a1153d1c4dc3ca76cba3e838b37f8ace9286bc294a828f280b9a80a950b11#npm:11.11.1"],\
             ["@emotion/styled", "virtual:8538185f02d068cf416140993ca3dea376a123f7cf785fe8a8bce7494f12a778857a1153d1c4dc3ca76cba3e838b37f8ace9286bc294a828f280b9a80a950b11#npm:11.11.0"],\
-            ["@fontsource/roboto", "npm:5.0.8"],\
             ["@mui/icons-material", "virtual:8538185f02d068cf416140993ca3dea376a123f7cf785fe8a8bce7494f12a778857a1153d1c4dc3ca76cba3e838b37f8ace9286bc294a828f280b9a80a950b11#npm:5.14.6"],\
             ["@mui/material", "virtual:8538185f02d068cf416140993ca3dea376a123f7cf785fe8a8bce7494f12a778857a1153d1c4dc3ca76cba3e838b37f8ace9286bc294a828f280b9a80a950b11#npm:5.14.6"],\
             ["@next/bundle-analyzer", "npm:13.4.19"],\
